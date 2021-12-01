@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html>
+<html>
     <head>
         <title>CDK Patterns</title>
     </head>
@@ -7,12 +7,16 @@
         <h1>Learning CDK patterns! Hello from S3</h1>
         <section>
             <button id="mybutton">Click me!</button>
+            <br/>
+            <p id="text"></p>
         </section>
     </body>
     <script>
-        const hello = "I am just a message";
-        document.getElementById("mybutton").onclick(() => {
-            alert(hello);
-        });
+        (function() {
+            const randomMsg = "I am just a message";
+            document.getElementById("mybutton").addEventListener("click", () => {
+                document.getElementById("text").innerHTML = randomMsg;
+            });
+        })();
     </script>
 </html>
